@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+
+import { Image } from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form"
 
@@ -15,6 +16,7 @@ interface Music {
     comp: string;
     vubir: string;
 }
+
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -45,6 +47,8 @@ export default function Contact() {
         setVubir('')
     }
 
+
+
     return (
         <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
             <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -57,7 +61,7 @@ export default function Contact() {
                                 </span>
                             </div>
                             <div className="flex">
-                                <img src="../favicon.ico" alt="" className="w-5"/>
+                                <Image src="../favicon.ico" alt="" className="w-5"/>
                                 <span>
                                     {item.name} - {item.vicon}
                                 </span>
