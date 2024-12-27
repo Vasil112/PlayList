@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "next/image";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form"
 
@@ -31,7 +31,7 @@ export default function Contact() {
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
-    const handleSubmited = e => {
+    const handleSubmited = (e: any) => {
         e.preventDefault();   
         const data = { name, vicon, comp, vubir};
         console.log(data);
